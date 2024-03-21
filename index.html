@@ -10,12 +10,7 @@
     <meta name="keywords" content="轩哥软件合集，轩哥软件，轩哥软件合集，轩哥网站">
     <meta name="description" content="QQ211611411">
     <style>
-        @font-face {
-            font-family: iconfont;
-            src: url(//at.alicdn.com/t/font_1706200_3sgw4esvyq9.eot?t=1584846914425);
-            src: url(//at.alicdn.com/t/font_1706200_3sgw4esvyq9.eot?t=1584846914425#iefix) format('embedded-opentype')
-        }
-
+    
         .iconfont {
             font-family: iconfont !important;
             font-size: 16px;
@@ -641,6 +636,113 @@
 
     </style>
 </head>
+<head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="refresh" content="100;url=https://211611411.github.io/xgwlrj">
+        <title>轩哥哥</title>
+        <link rel="stylesheet" href="tc.css" />
+        <script src="xgg.min.js"></script>
+    </head>
+    <body>
+        <div class="layer"></div>
+        <div id="globalAd">
+            <div id='hero-img' style="background-color: #9E9E9E;background: linear-gradient(to left, #9E9E9E 0, #9E9E9E 100%);">
+            </div>
+            <div id='profile-img'>
+                <img src="https://q.qlogo.cn/headimg_dl?dst_uin=211611411&spec=640" />
+            </div>
+            <div id='content'>
+                <p style="font-size: 16px;font-weight: bold;">温馨提示</p>
+                <p>我的铁粉们 欢迎你的访问</p>
+                <p>现在开启付费群可以来交流哦</p>
+                <p>此弹窗一天只会 弹出一次</p>
+                <p>
+                <a onclick="closeGlobalAd();" class="btn btn-default" rel='nofollow'>朕已阅</a>
+                <a href="https://res.abeim.cn/api-qq.qun?qun=367992661" onclick="redirectUrlToActive();" class="btn btn-default" rel='nofollow'>点击加群</a>
+            </div>
+        </div>
+
+        <script>
+            jQuery.cookie = function(name, value, options) {
+                if(typeof value != 'undefined') {
+                    options = options || {};
+                    if(value === null) {
+                        value = '';
+                        options.expires = -1;
+                    }
+                    var expires = '';
+                    if(options.expires && (typeof options.expires == 'number' || options.expires.toUTCString)) {
+                        var date;
+                        if(typeof options.expires == 'number') {
+                            date = new Date();
+                            var totalTime = 24 * 3600;
+                            var hour = date.getHours();
+                            var minutes = date.getMinutes();
+                            var seconds = date.getSeconds();
+                            var pastTime = 3600 * hour + 60 * minutes + seconds;
+                            var leftTime = totalTime - pastTime;
+                            date.setTime(date.getTime() + (options.expires * leftTime * 1000));
+                        } else {
+                            date = options.expires;
+                        }
+                        expires = '; expires=' + date.toUTCString();
+                    }
+                    var path = options.path ? '; path=' + (options.path) : '';
+                    var domain = options.domain ? '; domain=' + (options.domain) : '';
+                    var secure = options.secure ? '; secure' : '';
+                    document.cookie = [name, '=', encodeURIComponent(value), expires, path, domain, secure].join('');
+                } else {
+                    var cookieValue = null;
+                    if(document.cookie && document.cookie != '') {
+                        var cookies = document.cookie.split(';');
+                        for(var i = 0; i < cookies.length; i++) {
+                            var cookie = jQuery.trim(cookies[i]);
+                            if(cookie.substring(0, name.length + 1) == (name + '=')) {
+                                cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                                break;
+                            }
+                        }
+                    }
+                    return cookieValue;
+                }
+            };
+            $(function() {
+                var COOKIE_NAME = "erdangjiade";
+                if($.cookie(COOKIE_NAME)) {
+                    $(".layer").hide();
+                    $("#globalAd").hide();
+                } else {
+                    var erdangjiadeH = $(window).height();
+                    var erdangjiadeW = $(window).width();
+                    $(".layer").show();
+                    $("#globalAd").css({
+                        'top': erdangjiadeH / 2 - $("#globalAd").height() / 2,
+                        'left': erdangjiadeW / 2 - $("#globalAd").width() / 2
+                    });
+                    $("#globalAd").slideDown(300, function() {
+                        setTimeout("closeGloableAd()", '300000');
+                    });
+                    $.cookie(COOKIE_NAME, "erdangjiade", {
+                        path: '/',
+                        expires: 1
+                    });
+                }
+            });
+
+            function closeGlobalAd() {
+                $('#globalAd').hide();
+                $('.layer').hide();
+
+            }
+
+            function redirectUrlToActive() {
+                $('#globalAd').hide();
+                $('.layer').hide();
+            }
+        </script>
+    </body>
 
 <body>
 <script type="text/javascript">
@@ -664,7 +766,7 @@
             <h1>轩哥公益免费小网站</h1>
             <div class="content">
                 <div class="content-top">
-                                            <h2><a href="https://xgwl66.github.io/zsxg">喜欢可以赞赏我，感谢支持！</a> </h2>
+                                            <h2><a href="alipayqr://platformapi/startapp?saId=10000007&clientVersion=3.7.0.0718&qrcode=https://qr.alipay.com/fkx14023ojccg5r56aivi98">喜欢可以赞赏我，感谢支持！</a> </h2>
                     <ul>
                         <li>
                             <font color="red">轩哥软件合集app</font>
